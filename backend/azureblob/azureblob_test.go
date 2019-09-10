@@ -27,11 +27,6 @@ func (f *Fs) SetUploadChunkSize(cs fs.SizeSuffix) (fs.SizeSuffix, error) {
 	return f.setUploadChunkSize(cs)
 }
 
-func (f *Fs) SetUploadCutoff(cs fs.SizeSuffix) (fs.SizeSuffix, error) {
-	return f.setUploadCutoff(cs)
-}
-
 var (
 	_ fstests.SetUploadChunkSizer = (*Fs)(nil)
-	_ fstests.SetUploadCutoffer   = (*Fs)(nil)
 )
